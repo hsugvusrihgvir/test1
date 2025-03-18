@@ -28,6 +28,7 @@ func main() {
 
 	router.POST("/login", login)
 	router.POST("/register", register)
+	router.POST("/refresh", refreshAccessToken)
 
 	protected := router.Group("/")
 	protected.Use(authMiddleware())
